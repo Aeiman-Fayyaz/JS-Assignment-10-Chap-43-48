@@ -1,10 +1,11 @@
-*{
+* {
     padding: 5px;
 }
+
 /* QUESTION 1
 Show an alert box on click on a link. */
 
-a{
+a {
     text-decoration: none;
 }
 
@@ -12,7 +13,7 @@ a{
 Display some Mobile images in browser. On click on an
 image Show the message in alert to user.  */
 
-.mobileImages{
+.mobileImages {
     border: 2px solid rgb(49, 112, 144);
 }
 
@@ -33,7 +34,34 @@ table td {
     border: 1px solid black;
 }
 
+
 /* QUESTION 4
 Display an image in browser. Change the picture on mouseover and set the
 first picture on mouseout.
  */
+
+/* QUESTION 5
+Show a counter in browser. Counter should increase on click on increase
+button and decrease on click on decrease button. And show updated counter
+value in browser. */
+
+.counter{
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 36px;
+    text-align: center;
+}
+button{
+    padding: 10px 20px;
+    border: 2px solid black;
+    border-radius: 10px !important;
+    background-color: rgba(78, 12, 119, 0.687);
+    color: white;
+}
+.increase:hover{
+    background-color: green;
+    color: white;
+}
+.decrease:hover{
+    background-color: red;
+    color: white;
+}
