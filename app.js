@@ -24,15 +24,36 @@ function thanksForPurchasing() {
 
 // ANSWER 3
 
-function deleteRow() {
-  let deleteButtons = document.querySelectorAll(" .deleteRow");
-  deleteButtons.forEach((button) => {
-    button.addEventListener("click", function () {
-      deleteButtons.closest("tr").remove();
-      console.log(deleteButtons);
-      
-    });
-  });
+const studentNames = [
+  "Mehak",
+  "Kanza",
+  "Tania",
+  "Tehmina",
+  "Aqsa",
+  "Hafsa",
+  "Kainat",
+  "Sidra",
+  "Fatima",
+  "Maryam",
+  "Zainab",
+];
+
+const classes = [1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9 , 10 , 11]
+
+let table = document.getElementById("table")
+
+for (var i = 0; i < classes.length; i++) {
+  table.innerHTML += `<tr><td> ${i}</td>
+ <td>${studentNames[i]}</td>
+ <td>${classes[i]}</td>
+  <td><button onclick= deleteBtn(this) >Delete</button></td>
+  </tr>`;
+}
+
+function deleteBtn(ele) {
+  ele.parentNode.parentNode.remove()
+  console.log(ele.parentNode.parentNode);
+    
 }
 
 // QUESTION 4
@@ -41,15 +62,15 @@ function deleteRow() {
 
 // ANSWER 4
 
-let coverImg = document.getElementById("coverImg")
+let coverImg = document.getElementById("coverImg");
 
-coverImg.addEventListener("mouseover" , function(){
-  coverImg.src = "./Images/cover3.avif"
-})
+coverImg.addEventListener("mouseover", function () {
+  coverImg.src = "./Images/cover3.avif";
+});
 
-coverImg.addEventListener("mouseout" , function(){
-  coverImg.src = "./Images/cover2.avif"
-})
+coverImg.addEventListener("mouseout", function () {
+  coverImg.src = "./Images/cover2.avif";
+});
 
 // QUESTION 5
 // Show a counter in browser. Counter should increase on click on increase
@@ -58,25 +79,24 @@ coverImg.addEventListener("mouseout" , function(){
 
 // ANSWER 5
 
-let couter = 0
+let couter = 0;
 // Getting counter
-let countdoc = document.getElementById("value")
+let countdoc = document.getElementById("value");
 
-// Get elements 
+// Get elements
 
-let increaseBtn = document.getElementById("increase-btn")
-let decreaseBtn = document.getElementById("decrease-btn")
+let increaseBtn = document.getElementById("increase-btn");
+let decreaseBtn = document.getElementById("decrease-btn");
 
 function counterUpdate() {
-  countdoc.textContent = couter
-
+  countdoc.textContent = couter;
 }
 
-increaseBtn.addEventListener("click" , function(){
-  couter++
-  counterUpdate()
-})
-decreaseBtn.addEventListener("click" , function(){
-  couter--
-  counterUpdate()
-})
+increaseBtn.addEventListener("click", function () {
+  couter++;
+  counterUpdate();
+});
+decreaseBtn.addEventListener("click", function () {
+  couter--;
+  counterUpdate();
+});
